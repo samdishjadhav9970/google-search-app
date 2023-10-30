@@ -8,7 +8,7 @@ function App() {
   return <BrowserRouter>
             <Routes>
                 <Route path="/" exact element={<Home />} />
-                <Route path="/" element={<SearchResult />} />
+                <Route path="/:query/:startIndex" element={<SearchResult />} />
             </Routes>
   </BrowserRouter>;
 }
