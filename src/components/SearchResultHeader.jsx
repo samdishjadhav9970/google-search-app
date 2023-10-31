@@ -13,7 +13,7 @@ const SearchResultHeader = () => {
             <div className="flex items-center justify-between w-full">
                 <div className="flex items-center grow">
                     <img src={Logo} className="hidden md:block w-[92px] mr-10 " alt="" />
-                    <SearchInput from="searchResult" />
+                    <SearchInput from="searchResult"  />
                 </div>
             </div>
         </div>
