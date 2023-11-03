@@ -32,7 +32,7 @@ const SearchResult = () => {
 
   if (!results) return;
 
-  const { items, queries, searchInformation } = results;
+  const { items, queries, searchInformation  } = results;
 
   return (
     <div className="flex flex-col min-h-[100vh] ">
@@ -43,19 +43,20 @@ const SearchResult = () => {
         </div>
         {!imageSearch ? (
           <>
-            {items.map((item, index) => {
-              <SearchedItemTemplate key={index} data={item} />;
-            })}
+            {items.map((item, index) => (
+              <SearchedItemTemplate key={index} data={item} />
+            ))}
           </>
         ) : (
           <>
             <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-4">
-              {items.map((item, index) => {
-                <SearchedImageItemTemplate key={index} data={item} />;
-              })}
+              {items.map((item, index) => (
+                <SearchedImageItemTemplate key={index} data={item} />
+              ))}
             </div>
           </>
         )}
+        <Pagination queries = {queries} />
       </main>
       <Footer />
     </div>
