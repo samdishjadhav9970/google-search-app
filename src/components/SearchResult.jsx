@@ -25,7 +25,6 @@ const SearchResult = () => {
     }
 
     fetchDataFromApi(payload).then((res) => {
-      console.log(res);
       setResults(res);
     });
   };
